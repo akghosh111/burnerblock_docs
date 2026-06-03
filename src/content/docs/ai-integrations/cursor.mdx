@@ -1,0 +1,14 @@
+---
+title: Cursor Integration Prompt
+description: AI prompt to help you integrate BurnerBlock using Cursor.
+---
+
+### The Prompt
+
+```text
+Help me integrate BurnerBlock into my auth flow.
+I need a function that calls the BurnerBlock API to verify an email before account creation.
+API: https://api.burnerblock.pro/api/v1/verify
+Headers: x-api-key (from env)
+If verdict is 'block', throw an error with message 'Disposable emails are not allowed'.
+```

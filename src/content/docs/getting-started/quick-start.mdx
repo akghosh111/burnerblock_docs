@@ -1,0 +1,18 @@
+---
+title: Quick Start
+description: Get started with BurnerBlock in minutes.
+---
+
+1. Sign up at [burnerblock.pro](https://www.burnerblock.pro/).
+2. Get your free 1000 credits.
+3. Generate your API key.
+4. Start verifying emails!
+
+```bash
+curl --location 'https://api.burnerblock.pro/api/v1/verify' \
+--header 'x-api-key: YOUR_API_KEY' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "hello@example.com"
+}'
+```

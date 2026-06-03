@@ -1,0 +1,21 @@
+{
+  "name": "burnerblock-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/starlight": "^0.21.5",
+    "@fontsource/abel": "^5.0.0",
+    "@fontsource/montserrat": "^5.0.0",
+    "astro": "^4.5.9",
+    "sharp": "^0.33.5",
+    "typescript": "^5.7.2"
+  }
+}

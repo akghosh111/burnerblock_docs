@@ -1,0 +1,52 @@
+---
+title: BurnerBlock Documentation
+description: Protect your SaaS from fake signups, free-trial abuse, and temporary email providers with a single API call.
+template: splash
+hero:
+  tagline: Stop Disposable Emails Before They Create Accounts. Protect your SaaS from fake signups, free-trial abuse, and temporary email providers with a single API call.
+  actions:
+    - text: Get Started
+      link: /introduction/welcome
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why BurnerBlock?
+
+<CardGrid>
+	<Card title="Prevent Abuse" icon="warning">
+		Stop disposable email signups and temporary email abuse in its tracks.
+	</Card>
+	<Card title="Email Normalization" icon="setting">
+		Automatically normalize Gmail aliases and other common tricks to bypass signups.
+	</Card>
+	<Card title="MX Validation" icon="email">
+		Perform deep MX record validation to ensure the email is actually deliverable.
+	</Card>
+	<Card title="Developer First" icon="code">
+		Simple API that integrates with any auth provider like Clerk, Supabase, or BetterAuth.
+	</Card>
+</CardGrid>
+
+## Quick Start Example
+
+```bash
+curl --location 'https://api.burnerblock.pro/api/v1/verify' \
+--header 'x-api-key: your_api_key' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "user@temp-mail.com"
+}'
+```
+
+```json
+{
+  "email": "user@temp-mail.com",
+  "normalizedEmail": "user@temp-mail.com",
+  "riskScore": 95,
+  "reasons": ["disposable_provider"],
+  "verdict": "block"
+}
+```

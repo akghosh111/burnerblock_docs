@@ -1,0 +1,12 @@
+---
+title: How It Works
+description: The technology behind BurnerBlock.
+---
+
+BurnerBlock performs several checks to determine the risk level of an email address.
+
+1. **Email Normalization:** We strip dots and handle aliases.
+2. **Disposable Detection:** We maintain a massive, real-time updated list of disposable providers.
+3. **MX Validation:** We check if the domain has valid mail servers.
+4. **Risk Scoring:** Our algorithm calculates a score from 0 to 100.
+5. **Verdict Generation:** We provide a clear `allow`, `review`, or `block` recommendation.

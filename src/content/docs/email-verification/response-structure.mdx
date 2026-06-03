@@ -1,0 +1,21 @@
+---
+title: Response Structure
+description: Detailed breakdown of the API response.
+---
+
+```json
+{
+  "email": "test@gmail.com",
+  "normalizedEmail": "test@gmail.com",
+  "riskScore": 12,
+  "reasons": [],
+  "verdict": "allow"
+}
+```
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `email` | string | The original email provided. |
+| `normalizedEmail` | string | The email after normalization. |
+| `riskScore` | number | 0-100 risk score. |
+| `reasons` | string[] | List of reasons for the score. |
+| `verdict` | string | `allow`, `review`, or `block`. |
